@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5, h6, p, li {
   color: $silver-color;
 }
 
+h1 {
+  @include font-size(70px);
+}
+
 p, li {
   @include font-size(30px);
   font-weight: lighter;
@@ -147,6 +151,23 @@ p, li {
 
 /* STYLES AND LAYOUT FO MOBILE VIEW */
 @media(max-width:767px) {
+  h1, h2, h3, h4, h5, h6, p, li, .hero-text.gold-text h2, .hero-text.silver-text h2, .section-header {
+    @include font-size(30px);
+  }
+  p, li , p.hero-text {
+    font-size: 16px !important;
+    @include font-size(25px) ;
+  }
+
+  .button {
+    font-size: 14px !important;
+    border: 2px solid;
+  }
+  .call-to-action {
+      font-size: 14px !important;
+  }
+
+
   .navbar-fixed-top .navbar-brand {
       padding-top: 15px;
       padding-left: 15px;

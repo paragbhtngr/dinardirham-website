@@ -17,6 +17,7 @@
 
   <!-- Custom CSS -->
   <link href="css/base.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="./favicon.ico">
 
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 
@@ -73,11 +74,11 @@
           <img src="./img/dinarcoin.png" alt="" />
         </div>
         <div class="hero-text col-lg-8 col-sm-12">
-          <h2 class="gold-text">THE POWER OF GOLD</h2>
-          <h2 class="silver-text">THE SECURITY OF THE BLOCKCHAIN</h2>
-          <h4>
+          <h1 class="gold-text">THE POWER OF GOLD</h1>
+          <h1 class="silver-text">THE SECURITY OF THE BLOCKCHAIN</h1>
+          <p>
             A decentralized gold trading platform combining the financial stability of gold with the technological security of a blockchain network.
-          </h4>
+          </p>
         </div>
         <div class="call-to-action col-lg-12">
           <button class="button button-gold" id="call-to-action" type="button" name="button">
@@ -130,8 +131,8 @@
           <div class="carousel-inner">
             <!-- Carousel item 1 -->
             <div class="active item">
-              <div class="carousel-img col-md-5 col-sm-12">
-
+              <div class="carousel-img carousel-img col-md-4 col-md-offset-1 col-sm-12">
+                <img src="./img/wallet.png" alt="" />
               </div>
               <div class="carousel-text col-md-6 col-sm-12">
                 <h2>DINARDIRHAM WALLET</h2>
@@ -148,8 +149,8 @@
             </div>
             <!-- Carousel item 2 -->
             <div class="item">
-              <div class="carousel-img col-md-5 col-sm-12">
-
+              <div class="carousel-img col-md-4 col-md-offset-1 col-sm-12">
+                <img src="./img/coins.png" alt="" />
               </div>
               <div class="carousel-text col-md-6 col-sm-12">
                 <h2>DINARCOIN</h2>
@@ -172,8 +173,8 @@
             </div>
             <!-- Carousel item 3 -->
             <div class="item">
-              <div class="carousel-img col-md-5 col-sm-12">
-
+              <div class="carousel-img carousel-img col-md-4 col-md-offset-1 col-sm-12">
+                <img src="./img/eth.png" alt="" />
               </div>
               <div class="carousel-text col-md-6 col-sm-12">
                 <h2>GOLD SMART CONTRACT</h2>
@@ -202,8 +203,8 @@
             </div>
             <!-- Carousel item 4 -->
             <div class="item">
-              <div class="carousel-img col-md-5 col-sm-12">
-
+              <div class="carousel-img carousel-img col-md-4 col-md-offset-1 col-sm-12">
+                <img src="./img/mt4.png" alt="" />
               </div>
               <div class="carousel-text col-md-6 col-sm-12">
                 <h2>MT4 METALS FUTURES MARKETS</h2>
@@ -230,8 +231,8 @@
             </div>
             <!-- Carousel item 5 -->
             <div class="item">
-              <div class="carousel-img col-md-5 col-sm-12">
-
+              <div class="carousel-img carousel-img col-md-4 col-md-offset-1 col-sm-12">
+                <img src="./img/mt4.png" alt="" />
               </div>
               <div class="carousel-text col-md-6 col-sm-12">
                 <h2>MT4 FOREX MICRO & STP</h2>
@@ -259,8 +260,8 @@
             </div>
             <!-- Carousel item 6 -->
             <div class="item">
-              <div class="carousel-img col-md-5 col-sm-12">
-
+              <div class="carousel-img carousel-img col-md-4 col-md-offset-1 col-sm-12">
+                <img src="./img/bar.png" alt="" />
               </div>
               <div class="carousel-text col-md-6 col-sm-12">
                 <h2>PHYSICAL GOLD</h2>
@@ -545,6 +546,19 @@
       $(this).children("p").css("height", featuresP_max);
       $(this).children("h2").css("height", featuresH2_max);
     });
+
+    var carousel_img = 0;
+    var carousel_text = 0
+    $('.item').each( function(){
+      if ($(this).children(".carousel-text").height() > carousel_text) { carousel_text = $(this).children(".carousel-text").height(); };
+      if ($(this).children("carousel-img").height() > carousel_img) { carousel_img = $(this).children(".carousel-img").height(); };
+    });
+
+    $('.item').each( function(){
+      $(this).children("carousel-text").css("height", carousel_text);
+      $(this).children("carousel-img").css("height", carousel_img);
+    });
+
   }
 
   equalizeHeights();
