@@ -20,12 +20,12 @@ body {
   width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, li {
   font-weight: bold;
   color: $silver-color;
 }
 
-p {
+p, li {
   @include font-size(30px);
   font-weight: lighter;
 }
@@ -40,6 +40,7 @@ p {
 
 .button {
   border-radius: 0px;
+  margin: 20px;
   border-width: medium;
   background: transparent;
   text-transform: uppercase;
@@ -48,18 +49,32 @@ p {
   color: white;
   padding: 10px 20px 10px 20px;
   border-color: white;
+  border-style: solid;
+  transition: color 0.2s, background-color 0.2s;
 
   &.button-gold {
     color: $gold-color;
     border-color: $gold-color;
+    &:hover {
+      background: $gold-color;
+      color: $dark-blue-color;
+    }
   }
   &.button-silver {
     color: $silver-color;
     border-color: $silver-color;
+    &:hover {
+      background: $silver-color;
+      color: $dark-grey-color;
+    }
   }
   &.button-blue {
     color: $blue-color;
     border-color: $blue-color;
+    &:hover {
+      background: $blue-color;
+      color: $dark-blue-color;
+    }
   }
 
 }
@@ -82,9 +97,11 @@ p {
 
 .navbar-fixed-top .navbar-brand {
     padding: 30px 30px;
+    transition: padding 0.25s;
 
     .nav-logo {
       height: 75px;
+      transition: height 0.25s;
     }
 
 }
@@ -92,6 +109,19 @@ p {
 .navbar-inverse {
   background-color: transparent;
   border-color: transparent;
+  transition: padding 0.5s, background-color 0.5s;
+  &.scroll {
+    background-color: black;
+    .nav-logo {
+      height: 50px;
+    }
+    .navbar-right {
+      padding: 15px 30px;
+    }
+    .navbar-brand {
+      padding: 15px 30px;
+    }
+  }
 }
 
 .navbar-collapse>ul>li>a {
@@ -118,15 +148,23 @@ p {
 /* STYLES AND LAYOUT FO MOBILE VIEW */
 @media(max-width:767px) {
   .navbar-fixed-top .navbar-brand {
-      padding: 15px 15px;
+      padding-top: 15px;
+      padding-left: 15px;
+      padding-bottom: 30px;
 
       .nav-logo {
-        height: 50px;
+        height: 38px;
       }
 
   }
 
+  .navbar-collapse {
+    background: black;
+  }
+
   .navbar-toggle {
     margin-top: 20px;
+    right: 20px;
+    border: none;
   }
 }

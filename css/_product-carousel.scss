@@ -11,7 +11,8 @@
   padding-top: 10vh;
   padding-bottom: 10vh;
   min-height: 80vh;
-  background: $blue-color;
+  background: url('../img/carousel_bg.png');
+  background-size: cover;
     .carousel-inner {
         .item {
             transition-property: opacity;
@@ -40,6 +41,10 @@
 
     .carousel-control {
         z-index: 2;
+        @include font-size(150px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -47,8 +52,4 @@
 .carousel-inner,
 .carousel-inner .item {
     height: 100%;
-}
-
-.item,.item.active {
-    background: #E46653;
 }
