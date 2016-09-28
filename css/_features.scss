@@ -1,0 +1,44 @@
+@import "mixins";
+@import "vars";
+
+// Header Section
+.row.features {
+  background: url("../img/features_bg.png");
+  background-size: cover;
+
+  .col-lg-12 {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .section{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    .section-img {
+      text-align: center;
+      img{
+        width: 60%;
+        padding-top: 10vh;
+        padding-bottom: 5vh;
+      }
+    }
+    .section-text {
+      padding-bottom: 10vh;
+      min-height: 40vh;
+      h2 {
+        text-align: center;
+        color: $dark-blue-color;
+      }
+      p {
+        color: $dark-blue-color;
+        font-weight: normal;
+      }
+      .button-group {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+      }
+    }
+  }
+}

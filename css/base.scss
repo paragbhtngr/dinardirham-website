@@ -1,0 +1,132 @@
+@import "product-carousel";
+@import "mixins";
+@import "vars";
+
+@import "header";
+@import "gold-and-blockchain";
+@import "features";
+@import "press-release";
+@import "partners";
+@import "contact";
+
+/* GENERAL STYLES */
+body {
+    width: 100%;
+    font-family: $font-stack;
+    background: $dark-blue-color;
+}
+
+.container {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: bold;
+  color: $silver-color;
+}
+
+p {
+  @include font-size(30px);
+  font-weight: lighter;
+}
+
+.gold-text {
+  color: $gold-color;
+}
+
+.silver-text {
+  color: $silver-color;
+}
+
+.button {
+  border-radius: 0px;
+  border-width: medium;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  @include font-size(30px);
+  color: white;
+  padding: 10px 20px 10px 20px;
+  border-color: white;
+
+  &.button-gold {
+    color: $gold-color;
+    border-color: $gold-color;
+  }
+  &.button-silver {
+    color: $silver-color;
+    border-color: $silver-color;
+  }
+  &.button-blue {
+    color: $blue-color;
+    border-color: $blue-color;
+  }
+
+}
+
+.section-header{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  padding-top: 3vh;
+  z-index: 10;
+  @include font-size(50px);
+  font-weight: bold;
+}
+
+// Navigation styles
+
+.navbar-fixed-top .nav {
+    padding: 30px 30px;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 30px 30px;
+
+    .nav-logo {
+      height: 75px;
+    }
+
+}
+
+.navbar-inverse {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.navbar-collapse>ul>li>a {
+  @include font-size(40px);
+}
+
+
+
+
+
+
+
+/* STYLES AND LAYOUT FOR DESKTOP VIEW */
+@media(min-width:768px) {
+    body {
+
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 30px 30px;
+    }
+}
+
+/* STYLES AND LAYOUT FO MOBILE VIEW */
+@media(max-width:767px) {
+  .navbar-fixed-top .navbar-brand {
+      padding: 15px 15px;
+
+      .nav-logo {
+        height: 50px;
+      }
+
+  }
+
+  .navbar-toggle {
+    margin-top: 20px;
+  }
+}

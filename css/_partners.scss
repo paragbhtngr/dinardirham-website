@@ -1,0 +1,24 @@
+@import "mixins";
+@import "vars";
+
+.row.partners {
+  background: white;
+  .partners.img-grp {
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: auto;
+    a{
+      width: 25%;
+      img {
+        max-width: 90%;
+        padding-left: 5%;
+      }
+    }
+  }
+
+}

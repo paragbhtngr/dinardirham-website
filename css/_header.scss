@@ -1,0 +1,49 @@
+@import "mixins";
+
+// Header Section
+.row.header {
+  min-height: 100vh;
+  background: url("../img/hero_bg.png");
+  background-size: cover;
+
+  .hero-text{
+    vertical-align: middle;
+    h2 {
+      @include font-size(70px);
+    }
+    h4 {
+      font-weight: 300;
+      @include font-size(50px);
+    }
+  }
+
+  .hero-img {
+    text-align: center;
+    img{
+      width: 100%;
+      max-height: 50vh;
+      max-width: 50vh;
+    }
+  }
+
+  .col-lg-12 {
+    padding-top: 20vh;
+    width: 90%;
+    padding-left: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .call-to-action {
+      padding-top: 15vh;
+      padding-bottom: 10vh;
+      text-align: center;
+      .button {
+        @include font-size(50px);
+      }
+  }
+
+}
