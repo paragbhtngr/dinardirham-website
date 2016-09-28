@@ -8,11 +8,7 @@
 
   .hero-text{
     vertical-align: middle;
-    h2 {
-      @include font-size(70px);
-    }
-    h4 {
-      font-weight: 300;
+    p {
       @include font-size(50px);
     }
   }
