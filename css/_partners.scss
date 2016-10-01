@@ -12,9 +12,8 @@
     align-items: center;
     max-width: 1280px;
     margin: auto;
-    a{
-      width: 25%;
-      img {
+    img {
+        width: 25%;
         max-width: 90%;
         padding-left: 5%;
 
@@ -27,7 +26,6 @@
           filter: grayscale(0%);
         }
       }
-    }
   }
 
 }

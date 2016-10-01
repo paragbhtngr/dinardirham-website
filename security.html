@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>DinarDirham.com - Innovation Meets Future</title>
+
+  <!-- Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet" media="screen" title="no title">
+  <link href="css/animate.css" rel="stylesheet"  media="screen" title="no title">
+
+  <!-- Custom CSS -->
+  <link href="css/base.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="./favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./index.html">
+          <img class="nav-logo" src="./img/dd_logo.png" alt="" />
+        </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#">TECHNOLOGY</a>
+          </li>
+          <li>
+            <a href="#">SECURITY</a>
+          </li>
+          <li>
+            <a href="#">ABOUT US</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row security" id="startchange">
+      <div class="col-lg-12">
+        <div class="col-lg-12">
+
+            <p>
+              DinarDirham doesn't hold or control physical Gold, DinarCoin or Gold Smart Contracts. All assets issued in DinarDirham are bridged transparently 100% to the liquidity provider using blockchain to insure decentralization. All new Dinar Coin and Gold Smart Contract wallets use multi-signature that belong to Gold owners.
+
+              DinarDirham has multiple layers of proprietary technologies, secure processes and protocols to ensure the safety of our client's assets. DinarDirham servers are located in carefully selected jurisdictions, which reduces political risks, adverse regulatory actions or natural disasters. We take security very seriously. Security is our #1 priority.
+            </p>
+        </div>
+        <div class="hero-img col-lg-4 col-lg-offset-1 col-sm-12">
+          <img src="./img/security_icon.png" alt="" />
+        </div>
+        <div class="hero-text col-lg-7 col-sm-12">
+          <p>
+            Please find below our security practices:
+            <ul>
+              <li> Multi-tiered, multi-firewall architecture</li>
+              <li> The site runs entirely over SSL (https)</li>
+              <li> We hash passwords stored in the database (using bcrypt with a cost factor of 10)</li>
+              <li> We rate limit a variety of actions on the site (login attempts, etc)</li>
+              <li> We use SQL injection filters</li>
+              <li> We verify the authenticity of POST, PUT, and DELETE requests to prevent CSRF attacks</li>
+              <li> We check for strong passwords on account creation and password reset</li>
+              <li> Application credentials are kept separate from the database and code base</li>
+              <li> We use separate passwords for each service</li>
+              <li> Employees must pass a criminal background check as part of the hiring process</li>
+              <li> KYC/AML compliance for all our customers</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+
+  <!-- jQuery -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-scrollto.js" charset="utf-8"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+  $('.carousel').carousel();
+
+  var equalizeHeights = function(){
+    var gnbP_max = 0;
+    var gnbH2_max = 0
+    $('.row.gold-and-blockchain>.col-lg-12>.section>.section-text').each( function(){
+      if ($(this).children("p").height() > gnbP_max) { gnbP_max = $(this).children("p").height(); };
+      if ($(this).children("h2").height() > gnbH2_max) { gnbH2_max = $(this).children("h2").height(); };
+    });
+
+    $('.row.gold-and-blockchain>.col-lg-12>.section>.section-text').each( function(){
+      $(this).children("p").css("height", gnbP_max);
+      $(this).children("h2").css("height", gnbH2_max);
+    });
+
+    var featuresP_max = 0;
+    var featuresH2_max = 0
+    $('.row.features>.col-lg-12>.section>.section-text').each( function(){
+      if ($(this).children("p").height() > featuresP_max) { featuresP_max = $(this).children("p").height(); };
+      if ($(this).children("h2").height() > featuresH2_max) { featuresH2_max = $(this).children("h2").height(); };
+    });
+
+    $('.row.features>.col-lg-12>.section>.section-text').each( function(){
+      $(this).children("p").css("height", featuresP_max);
+      $(this).children("h2").css("height", featuresH2_max);
+    });
+
+    var carousel_img = 0;
+    var carousel_text = 0
+    $('.item').each( function(){
+      if ($(this).children(".carousel-text").height() > carousel_text) { carousel_text = $(this).children(".carousel-text").height(); };
+      if ($(this).children("carousel-img").height() > carousel_img) { carousel_img = $(this).children(".carousel-img").height(); };
+    });
+
+    $('.item').each( function(){
+      $(this).children("carousel-text").css("height", carousel_text);
+      $(this).children("carousel-img").css("height", carousel_img);
+    });
+
+  }
+
+  equalizeHeights();
+
+  $( window ).resize(function() {
+    console.log("resize");
+    // Normalize heights of all elements in each section
+    equalizeHeights();
+  });
+
+  $(document).ready(function(){
+    var scroll_start = 0;
+    var startchange = $('#startchange');
+    var offset = startchange.offset();
+    $(document).scroll(function() {
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top - 100) {
+        console.log("ADDING CLASS");
+        if (!($('.navbar-inverse').hasClass( "scroll" ))) {
+          $('.navbar-inverse').addClass( "scroll" );
+        }
+      }
+      else {
+        if (($('.navbar-inverse').hasClass( "scroll" ))) {
+          $('.navbar-inverse').removeClass( "scroll" );
+        }
+      }
+    });
+  });
+
+  $('#call-to-action').click( function(){
+    $('#startchange').ScrollTo();
+  });
+
+
+
+  </script>
+
+</body>
+
+</html>

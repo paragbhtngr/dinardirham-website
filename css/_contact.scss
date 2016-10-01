@@ -52,3 +52,25 @@
     text-align: right;
   }
 }
+
+@media(max-width:767px) {
+  .row.contact {
+    text-align: center;
+    .col-lg-12 {
+      width: 100%;
+    }
+    .send-email {
+      padding-top: 50px;
+      form>input[type="text"],textarea {
+        @include font-size(25px);
+        margin-bottom: 10px;
+        color: $silver-color;
+      }
+    }
+
+    .button-align {
+      width: 100%;
+      text-align:center;
+    }
+  }
+}
