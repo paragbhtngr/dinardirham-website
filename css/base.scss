@@ -11,6 +11,7 @@
 
 @import "tech";
 @import "security";
+@import "about";
 
 /* GENERAL STYLES */
 body {
@@ -138,8 +139,26 @@ p, li {
   @include font-size(40px);
 }
 
-
-
+.row.video {
+  .videoWrapper {
+	position: relative;
+	padding-bottom: 432px; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+  margin: auto;
+  max-width: 768px;
+  max-height: 450px;
+  margin-top: -230px;
+  margin-bottom: -230px;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+}
 
 
 
@@ -194,4 +213,21 @@ p, li {
     right: 20px;
     border: none;
   }
+
+  .row.video {
+    .videoWrapper {
+  	position: relative;
+  	padding-bottom: 56.25%; /* 16:9 */
+  	padding-top: 25px;
+  	height: 0;
+  }
+  .videoWrapper iframe {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  }
+  }
+
 }

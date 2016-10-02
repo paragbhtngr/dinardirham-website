@@ -5,6 +5,7 @@
   min-height: 100vh;
   background: url("../img/hero_bg.png");
   background-size: cover;
+  padding-bottom: 230px;
 
   .hero-text{
     vertical-align: middle;
@@ -34,8 +35,8 @@
   }
 
   .call-to-action {
-      padding-top: 15vh;
-      padding-bottom: 10vh;
+      padding-top: 7.5vh;
+      padding-bottom: 7.5vh;
       text-align: center;
       .button {
         @include font-size(50px);
