@@ -35,10 +35,15 @@
         font-weight: normal;
       }
       .button-group {
+        text-align: center;
         display: flex;
         align-items: center;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         justify-content: space-around;
+        .button-group {
+          display: flex;
+          flex-wrap: nowrap; 
+        }
       }
     }
   }

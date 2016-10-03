@@ -19,11 +19,11 @@
 
         transition: filter 0.5s;
 
-        -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
-        filter: grayscale(100%);
+        // -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+        // filter: grayscale(100%);
         &:hover{
-          -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
-          filter: grayscale(0%);
+          // -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+          // filter: grayscale(0%);
         }
       }
   }

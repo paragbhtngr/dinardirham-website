@@ -88,6 +88,11 @@ p, li {
     }
   }
 
+  &.button-disabled {
+    color: $grey-color;
+    border-color: $grey-color;
+  }
+
 }
 
 .section-header{
