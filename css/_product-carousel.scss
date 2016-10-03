@@ -65,6 +65,9 @@
       }
     }
     .carousel-text {
+      h2 {
+        display: block;
+      }
       display: flex !important;
       align-items: center;
       flex-wrap: wrap;

@@ -4,7 +4,8 @@
 // Header Section
 .row.tech {
   background: url("../img/hero_bg.png");
-  background-repeat: repeat;
+  background-repeat: cover;
+  background-attachment: fixed;
   filter: blur(2);
   display: flex;
 
@@ -21,7 +22,7 @@
     background: rgba(255,255,255,0.7);
     margin-bottom: 10vh;
     box-shadow: 0px 5px 20px 2px rgba(0,0,0,0.25);
-    
+
     .section-img {
       text-align: center;
       img{
@@ -72,6 +73,24 @@
           -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
           filter: grayscale(0%);
         }
+      }
+    }
+  }
+}
+
+.row.minting, .row.burning {
+  .col-lg-12 {
+    .section-header {
+      color: $silver-color;
+    }
+    .process-img {
+      padding-top: 10vh;
+      text-align: center;
+      padding-bottom: 10vh;
+      img {
+        width: 100%;
+        max-width: 1280px;
+        margin: auto;
       }
     }
   }
